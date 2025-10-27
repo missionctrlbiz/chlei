@@ -4,7 +4,6 @@ import AppIcon from '@/components/Icon'
 import Counter from '@/components/CountUp'
 import HeroSlider from '@/components/HeroSlider'
 import { organizationInfo } from '@/lib/content'
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function HomePage() {
     return (

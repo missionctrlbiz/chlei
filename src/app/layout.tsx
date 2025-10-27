@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Loader from '@/components/layout/Loader'
 import HeaderStrip from '@/components/layout/HeaderStrip'
 import NavBar from '@/components/layout/NavBar'
@@ -62,6 +63,9 @@ export default function RootLayout({
 
                 {/* Client-side plugin re-initialization on route changes */}
                 <ClientPlugins />
+                
+                {/* Vercel Speed Insights */}
+                <SpeedInsights />
             </body>
         </html>
     )

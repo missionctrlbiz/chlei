@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
     title: 'Education - CHLEI',
     description: 'Equal access to quality education, skills and vocational training, eliminating gender disparities.'
 }
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Education() {
     return (
         <>
-            <Breadcrumb 
+            <Breadcrumb
                 title="Education Projects"
                 backgroundImage="/img/breadcrumb/vl-service-bradcrumb.png"
                 items={[
