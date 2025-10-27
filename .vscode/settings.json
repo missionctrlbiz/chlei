@@ -1,0 +1,16 @@
+{
+    "debug.javascript.autoAttachFilter": "smart",
+    "debug.openDebug": "openOnSessionStart",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "files.exclude": {
+        "**/.next": true,
+        "**/node_modules": true
+    }
+}
