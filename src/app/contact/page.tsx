@@ -1,32 +1,25 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import AppIcon from '@/components/Icon'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 import { contactInfo, socialLinks } from '@/lib/navigation'
 
 export const metadata = {
-    title: 'Contact Us - CLHEI',
-    description: 'Get in touch with Community Links Health, Education, and Infrastructure.'
+    title: 'Contact Us - CHLEI',
+    description: 'Get in touch with Community & Health Links Empowerment Initiative.'
 }
 
 export default function ContactPage() {
     return (
         <>
-            {/* Breadcrumb */}
-            <div className="vl-breadcrumb-area" style={{ backgroundImage: 'url(/img/breadcrumb/vl-contact-bg.png)' }}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="vl-breadcrumb-content text-center">
-                                <h1 className="title">Contact Us</h1>
-                                <ul>
-                                    <li><Link href="/">Home</Link></li>
-                                    <li className="active">Contact</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Breadcrumb
+                title="Contact Us"
+                backgroundImage="/img/breadcrumb/vl-contact-bg.png"
+                items={[
+                    { label: 'Home', href: '/' },
+                    { label: 'Contact', active: true }
+                ]}
+            />
 
             {/* Contact Section */}
             <section className="vl-contact-area sp2">
