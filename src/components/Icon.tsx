@@ -13,15 +13,15 @@ export type AppIconProps = {
 
 export default function AppIcon({ name, size = 24, color, className, title, ariaHidden }: AppIconProps) {
     return (
-        <Icon
-            icon={name}
-            width={size}
-            height={size}
-            color={color}
-            className={className}
-            aria-hidden={ariaHidden}
-            title={title}
-            role={title ? 'img' : 'presentation'}
-        />
+        <span className={className} title={title}>
+            <Icon
+                icon={name}
+                width={size}
+                height={size}
+                color={color}
+                aria-hidden={ariaHidden}
+                role={title ? 'img' : 'presentation'}
+            />
+        </span>
     );
 }
