@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 
-export const metadata: Metadata = { title: 'Projects - CLHEI' }
+export const metadata: Metadata = {
+    title: 'Projects - CHLEI',
+    description: 'Explore our projects by sector across agriculture, education, environment, governance, health, humanitarian response, and peace & security.'
+}
 
 const projects = [
     { slug: 'agriculture', title: 'Agriculture' },
@@ -15,19 +19,42 @@ const projects = [
 
 export default function ProjectsIndex() {
     return (
-        <main className="container py-8">
-            <h1>Projects</h1>
-            <p>Explore our projects by sector.</p>
+        <>
+            <Breadcrumb
+                title="Our Projects"
+                backgroundImage="/img/breadcrumb/vl-service-bradcrumb.png"
+                items={[
+                    { label: 'Home', href: '/' },
+                    { label: 'Projects', active: true }
+                ]}
+            />
 
-            <div className="row">
-                {projects.map((p) => (
-                    <div key={p.slug} className="col-lg-4 col-md-6 mb-4">
-                        <div className="vl-service-single-box p-4">
-                            <h3 className="title"><Link href={`/projects/${p.slug}`}>{p.title}</Link></h3>
+            <section className="vl-service-area sp2">
+                <div className="container">
+                    <div className="row mb-60">
+                        <div className="col-lg-12">
+                            <div className="vl-section-title-1 text-center">
+                                <h5 className="subtitle">What We Do</h5>
+                                <h2 className="title">Projects by Sector</h2>
+                                <p>Explore our diverse range of projects addressing critical needs across multiple sectors in communities throughout Nigeria.</p>
+                            </div>
                         </div>
                     </div>
-                ))}
-            </div>
-        </main>
+
+                    <div className="row">
+                        {projects.map((p) => (
+                            <div key={p.slug} className="col-lg-4 col-md-6 mb-30">
+                                <div className="vl-service-single-box">
+                                    <div className="vl-service-content">
+                                        <h3 className="title"><Link href={`/projects/${p.slug}`}>{p.title}</Link></h3>
+                                        <Link href={`/projects/${p.slug}`} className="read-more">View Projects <i className="fa-solid fa-arrow-right"></i></Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }
