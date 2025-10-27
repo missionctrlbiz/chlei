@@ -1,11 +1,21 @@
-// Navigation configuration for CLHEI website
+// Navigation configuration for CHLEI website
 export const navigationLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
+    {
+        href: '/about',
+        label: 'About',
+        submenu: [
+            { href: '/about', label: 'About CHLEI' },
+            { href: '/thematics', label: 'Thematic Areas' },
+            { href: '/team', label: 'Our Team' },
+            { href: '/partners', label: 'Partners' },
+        ]
+    },
     {
         href: '/programs',
-        label: 'Our Programs',
+        label: 'Programs',
         submenu: [
+            { href: '/programs', label: 'All Programs' },
             { href: '/programs/climate-action', label: 'Climate Action' },
             { href: '/programs/livelihood', label: 'Livelihood & Food Security' },
             { href: '/programs/peacebuilding', label: 'Peacebuilding' },
@@ -13,9 +23,40 @@ export const navigationLinks = [
             { href: '/programs/governance', label: 'Governance' },
         ]
     },
-    { href: '/impact', label: 'Our Impact' },
-    { href: '/blog', label: 'News & Stories' },
-    { href: '/contact', label: 'Contact Us' },
+    {
+        href: '/projects',
+        label: 'Projects',
+        submenu: [
+            { href: '/projects', label: 'All Projects' },
+            { href: '/projects/agriculture', label: 'Agriculture' },
+            { href: '/projects/education', label: 'Education' },
+            { href: '/projects/environment-climate-change', label: 'Environment & Climate' },
+            { href: '/projects/health', label: 'Health' },
+            { href: '/projects/governance', label: 'Governance' },
+            { href: '/projects/humanitarian-response', label: 'Humanitarian Response' },
+            { href: '/projects/peace-security', label: 'Peace & Security' },
+        ]
+    },
+    {
+        href: '/resources',
+        label: 'Resources',
+        submenu: [
+            { href: '/impact', label: 'Our Impact' },
+            { href: '/reports', label: 'Reports & Publications' },
+            { href: '/policies', label: 'Policies' },
+            { href: '/blog', label: 'News & Stories' },
+            { href: '/faq', label: 'FAQ' },
+        ]
+    },
+    {
+        href: '/get-involved',
+        label: 'Get Involved',
+        submenu: [
+            { href: '/volunteer-mentorship', label: 'Volunteer & Mentorship' },
+            { href: '/donate', label: 'Donate' },
+            { href: '/contact', label: 'Contact Us' },
+        ]
+    },
 ]
 
 export const socialLinks = {
