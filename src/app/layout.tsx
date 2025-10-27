@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
 import Loader from '@/components/layout/Loader'
 import HeaderStrip from '@/components/layout/HeaderStrip'
 import NavBar from '@/components/layout/NavBar'
@@ -66,6 +67,9 @@ export default function RootLayout({
                 
                 {/* Vercel Speed Insights */}
                 <SpeedInsights />
+                
+                {/* Vercel Analytics */}
+                <Analytics />
             </body>
         </html>
     )

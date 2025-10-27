@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ThematicsPage() {
     return (
         <>
-            <Breadcrumb 
+            <Breadcrumb
                 title="Thematic Areas"
                 backgroundImage="/img/breadcrumb/vl-service-bradcrumb.png"
                 items={[
