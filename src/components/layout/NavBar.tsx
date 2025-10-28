@@ -24,6 +24,16 @@ function LogoImage({ small, footer }: { small?: boolean; footer?: boolean }) {
 }
 
 export default function NavBar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen)
+    }
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false)
+    }
+
     return (
         <>
             {/* Desktop Header */}
@@ -112,7 +122,11 @@ export default function NavBar() {
                         </div>
                         <div className="col-6">
                             <div className="mobile-menu-bar text-end">
-                                <button className="mobile-menu-toggle">
+                                <button
+                                    className="mobile-menu-toggle"
+                                    onClick={toggleMobileMenu}
+                                    aria-label="Toggle mobile menu"
+                                >
                                     <i className="fa-solid fa-bars"></i>
                                 </button>
                             </div>
@@ -122,63 +136,63 @@ export default function NavBar() {
             </div>
 
             {/* Mobile Menu Sidebar - Hidden by default, shown when toggled */}
-            <div className="mobile-sidebar mobile-sidebar1">
-                <div className="menu-close">
+            <div className={`mobile-sidebar mobile-sidebar1 ${isMobileMenuOpen ? 'mobile-menu-active' : ''}`}>
+                <div className="menu-close" onClick={closeMobileMenu}>
                     <i className="fa-solid fa-xmark"></i>
                 </div>
 
                 <ul className="mobile-nav-list nav-list1">
-                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
                     <li><Link href="#">About</Link>
                         <ul className="sub-menu">
-                            <li><Link href="/about">About CHLEI</Link></li>
-                            <li><Link href="/thematics">Thematic Areas</Link></li>
-                            <li><Link href="/team">Our Team</Link></li>
-                            <li><Link href="/partners">Partners</Link></li>
+                            <li><Link href="/about" onClick={closeMobileMenu}>About CHLEI</Link></li>
+                            <li><Link href="/thematics" onClick={closeMobileMenu}>Thematic Areas</Link></li>
+                            <li><Link href="/team" onClick={closeMobileMenu}>Our Team</Link></li>
+                            <li><Link href="/partners" onClick={closeMobileMenu}>Partners</Link></li>
                         </ul>
                     </li>
                     <li><Link href="#">Programs</Link>
                         <ul className="sub-menu">
-                            <li><Link href="/programs">All Programs</Link></li>
-                            <li><Link href="/programs/climate-action">Climate Action</Link></li>
-                            <li><Link href="/programs/livelihood">Livelihood & Food Security</Link></li>
-                            <li><Link href="/programs/peacebuilding">Peacebuilding</Link></li>
-                            <li><Link href="/programs/mental-health">Mental Health</Link></li>
-                            <li><Link href="/programs/governance">Governance</Link></li>
+                            <li><Link href="/programs" onClick={closeMobileMenu}>All Programs</Link></li>
+                            <li><Link href="/programs/climate-action" onClick={closeMobileMenu}>Climate Action</Link></li>
+                            <li><Link href="/programs/livelihood" onClick={closeMobileMenu}>Livelihood & Food Security</Link></li>
+                            <li><Link href="/programs/peacebuilding" onClick={closeMobileMenu}>Peacebuilding</Link></li>
+                            <li><Link href="/programs/mental-health" onClick={closeMobileMenu}>Mental Health</Link></li>
+                            <li><Link href="/programs/governance" onClick={closeMobileMenu}>Governance</Link></li>
                         </ul>
                     </li>
                     <li><Link href="#">Projects</Link>
                         <ul className="sub-menu">
-                            <li><Link href="/projects">All Projects</Link></li>
-                            <li><Link href="/projects/agriculture">Agriculture</Link></li>
-                            <li><Link href="/projects/education">Education</Link></li>
-                            <li><Link href="/projects/environment-climate-change">Environment & Climate</Link></li>
-                            <li><Link href="/projects/health">Health</Link></li>
-                            <li><Link href="/projects/governance">Governance</Link></li>
-                            <li><Link href="/projects/humanitarian-response">Humanitarian Response</Link></li>
-                            <li><Link href="/projects/peace-security">Peace & Security</Link></li>
+                            <li><Link href="/projects" onClick={closeMobileMenu}>All Projects</Link></li>
+                            <li><Link href="/projects/agriculture" onClick={closeMobileMenu}>Agriculture</Link></li>
+                            <li><Link href="/projects/education" onClick={closeMobileMenu}>Education</Link></li>
+                            <li><Link href="/projects/environment-climate-change" onClick={closeMobileMenu}>Environment & Climate</Link></li>
+                            <li><Link href="/projects/health" onClick={closeMobileMenu}>Health</Link></li>
+                            <li><Link href="/projects/governance" onClick={closeMobileMenu}>Governance</Link></li>
+                            <li><Link href="/projects/humanitarian-response" onClick={closeMobileMenu}>Humanitarian Response</Link></li>
+                            <li><Link href="/projects/peace-security" onClick={closeMobileMenu}>Peace & Security</Link></li>
                         </ul>
                     </li>
                     <li><Link href="#">Resources</Link>
                         <ul className="sub-menu">
-                            <li><Link href="/impact">Our Impact</Link></li>
-                            <li><Link href="/reports">Reports & Publications</Link></li>
-                            <li><Link href="/policies">Policies</Link></li>
-                            <li><Link href="/blog">News & Stories</Link></li>
-                            <li><Link href="/faq">FAQ</Link></li>
+                            <li><Link href="/impact" onClick={closeMobileMenu}>Our Impact</Link></li>
+                            <li><Link href="/reports" onClick={closeMobileMenu}>Reports & Publications</Link></li>
+                            <li><Link href="/policies" onClick={closeMobileMenu}>Policies</Link></li>
+                            <li><Link href="/blog" onClick={closeMobileMenu}>News & Stories</Link></li>
+                            <li><Link href="/faq" onClick={closeMobileMenu}>FAQ</Link></li>
                         </ul>
                     </li>
                     <li><Link href="#">Get Involved</Link>
                         <ul className="sub-menu">
-                            <li><Link href="/volunteer-mentorship">Volunteer & Mentorship</Link></li>
-                            <li><Link href="/donate">Donate</Link></li>
-                            <li><Link href="/contact">Contact Us</Link></li>
+                            <li><Link href="/volunteer-mentorship" onClick={closeMobileMenu}>Volunteer & Mentorship</Link></li>
+                            <li><Link href="/donate" onClick={closeMobileMenu}>Donate</Link></li>
+                            <li><Link href="/contact" onClick={closeMobileMenu}>Contact Us</Link></li>
                         </ul>
                     </li>
                 </ul>
 
                 <div className="allmobilesection">
-                    <Link href="/donate" className="header-mobile-btn1">Donate Now <span><i className="fa-solid fa-arrow-right"></i></span></Link>
+                    <Link href="/donate" onClick={closeMobileMenu} className="header-mobile-btn1">Donate Now <span><i className="fa-solid fa-arrow-right"></i></span></Link>
 
                     <div className="vl-mobile-contact1">
                         <h3 className="title">Contact Info</h3>
