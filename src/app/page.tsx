@@ -172,62 +172,126 @@ export default function HomePage() {
 
                         <TabsContent value="health">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                                {organizationInfo.programAreas.map((program, index) => (
-                                    <Card key={index}>
-                                        <CardHeader>
-                                            <CardTitle>{program}</CardTitle>
-                                            <CardDescription>Supporting conflict-affected communities</CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p>Over 500,000 beneficiaries reached since 2018...</p>
-                                        </CardContent>
-                                    </Card>
-                                ))}
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Mental Health & Psychosocial Support</CardTitle>
+                                        <CardDescription>Supporting conflict-affected communities</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Over 500,000 beneficiaries reached since 2018...</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Primary Healthcare</CardTitle>
+                                        <CardDescription>Providing essential health services</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Supporting local clinics and health workers.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Maternal & Child Health</CardTitle>
+                                        <CardDescription>Improving outcomes for mothers and children</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Antenatal and postnatal care programs.</p>
+                                    </CardContent>
+                                </Card>
                             </div>
                         </TabsContent>
                         <TabsContent value="education">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                                {organizationInfo.programAreas.map((program, index) => (
-                                    <Card key={index}>
-                                        <CardHeader>
-                                            <CardTitle>{program}</CardTitle>
-                                            <CardDescription>Supporting conflict-affected communities</CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p>Over 500,000 beneficiaries reached since 2018...</p>
-                                        </CardContent>
-                                    </Card>
-                                ))}
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>School Enrollment</CardTitle>
+                                        <CardDescription>Increasing access to education</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Getting children back to school.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Adult Literacy</CardTitle>
+                                        <CardDescription>Empowering adults with literacy skills</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Literacy and numeracy programs.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Vocational Training</CardTitle>
+                                        <CardDescription>Providing skills for employment</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Training in various trades and crafts.</p>
+                                    </CardContent>
+                                </Card>
                             </div>
                         </TabsContent>
                         <TabsContent value="climate">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                                {organizationInfo.programAreas.map((program, index) => (
-                                    <Card key={index}>
-                                        <CardHeader>
-                                            <CardTitle>{program}</CardTitle>
-                                            <CardDescription>Supporting conflict-affected communities</CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p>Over 500,000 beneficiaries reached since 2018...</p>
-                                        </CardContent>
-                                    </Card>
-                                ))}
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Climate Adaptation</CardTitle>
+                                        <CardDescription>Building resilience to climate change</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Community-based adaptation strategies.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Environmental Protection</CardTitle>
+                                        <CardDescription>Conserving natural resources</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Reforestation and conservation projects.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Clean Energy</CardTitle>
+                                        <CardDescription>Promoting sustainable energy solutions</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Access to clean and affordable energy.</p>
+                                    </CardContent>
+                                </Card>
                             </div>
                         </TabsContent>
                         <TabsContent value="peace">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                                {organizationInfo.programAreas.map((program, index) => (
-                                    <Card key={index}>
-                                        <CardHeader>
-                                            <CardTitle>{program}</CardTitle>
-                                            <CardDescription>Supporting conflict-affected communities</CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p>Over 500,000 beneficiaries reached since 2018...</p>
-                                        </CardContent>
-                                    </Card>
-                                ))}
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Conflict Resolution</CardTitle>
+                                        <CardDescription>Mediating and resolving conflicts</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Community-based peace initiatives.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Community Peacebuilding</CardTitle>
+                                        <CardDescription>Building social cohesion</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Peace clubs and community dialogues.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card>
+                                    <CardHeader>
+                                        <CardTitle>Youth Empowerment</CardTitle>
+                                        <CardDescription>Engaging youth in peacebuilding</CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p>Youth leadership and mentorship programs.</p>
+                                    </CardContent>
+                                </Card>
                             </div>
                         </TabsContent>
                     </Tabs>
