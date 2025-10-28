@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
 import AppIcon from '@/components/Icon'
@@ -97,16 +99,15 @@ export default function HeroSlider() {
                                     <div className="row">
                                         <div className="col-lg-7">
                                             <div className="vl-hero-section-title">
-                                                <h5 className="vl-subtitle" data-aos="fade-right" data-aos-delay="200">
-                                                    <span><AppIcon name="mdi:charity" size={24} title="Our Mission" /></span>
-                                                    {slide.subtitle}
-                                                </h5>
-                                                <h1 className="vl-title text-anime-style-3" data-aos="fade-up" data-aos-delay="400">{slide.title}</h1>
-                                                <p data-aos="fade-up" data-aos-delay="600">{slide.description}</p>
+                                                <Badge variant="secondary" className="mb-4">
+                                                    Since 2006
+                                                </Badge>
+                                                <h1 className="text-5xl font-bold mb-4" data-aos="fade-up" data-aos-delay="400">{slide.title}</h1>
+                                                <p className="text-xl text-gray-600 mb-6" data-aos="fade-up" data-aos-delay="600">{slide.description}</p>
                                                 <div className="vl-hero-btn" data-aos="fade-up" data-aos-delay="800">
-                                                    <Link href={slide.cta.link} className="header-btn1">
-                                                        {slide.cta.text} <span><i className="fa-solid fa-arrow-right"></i></span>
-                                                    </Link>
+                                                    <Button asChild size="lg">
+                                                        <Link href={slide.cta.link}>{slide.cta.text}</Link>
+                                                    </Button>
                                                 </div>
                                             </div>
                                         </div>
